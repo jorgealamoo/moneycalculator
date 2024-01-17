@@ -12,7 +12,7 @@ import java.util.List;
 public class MainSwing {
     public static void main(String[] args) {
         MainFrame frame = new MainFrame();
-        FixerCurrencyLoader currencyLoader = new FixerCurrencyLoader();
+        CurrencyLoader currencyLoader = new FixerCurrencyLoader();
         List<Currency> currencies = currencyLoader.load();
         ExchangeRateLoader exchangeRateLoader = new MockExchangeRateLoader();
         MoneyDialog moneyDialog = frame.getMoneyDialog().define(currencies);
