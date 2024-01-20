@@ -18,7 +18,7 @@ public class MainFrame extends JFrame {
 
     public MainFrame() throws HeadlessException {
         this.setTitle("Money Calculator");
-        this.setSize(1000,600);
+        this.setSize(800,600);
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setLayout(new FlowLayout(FlowLayout.CENTER));

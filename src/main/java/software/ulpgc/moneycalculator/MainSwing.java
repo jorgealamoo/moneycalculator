@@ -2,6 +2,7 @@ package software.ulpgc.moneycalculator;
 
 import software.ulpgc.moneycalculator.control.ExchangeCommand;
 import software.ulpgc.moneycalculator.fixerws.FixerCurrencyLoader;
+import software.ulpgc.moneycalculator.fixerws.FixerExchangeRateLoader;
 import software.ulpgc.moneycalculator.mock.MockCurrencyLoader;
 import software.ulpgc.moneycalculator.mock.MockExchangeRateLoader;
 import software.ulpgc.moneycalculator.model.Currency;
@@ -14,7 +15,7 @@ public class MainSwing {
         MainFrame frame = new MainFrame();
         CurrencyLoader currencyLoader = new FixerCurrencyLoader();
         List<Currency> currencies = currencyLoader.load();
-        ExchangeRateLoader exchangeRateLoader = new MockExchangeRateLoader();
+        ExchangeRateLoader exchangeRateLoader = new FixerExchangeRateLoader();
         MoneyDialog moneyDialog = frame.getMoneyDialog().define(currencies);
         CurrencyDialog currencyDialog = frame.getCurrencyDialog().define(currencies);
         MoneyDisplay moneyDisplay = frame.getMoneyDisplay();
